@@ -1,0 +1,94 @@
+.modal-dialog {
+  position: relative;
+  display: table;
+  overflow: auto;
+  min-width: 300px;
+}
+/*
+.modal-body { /* Restrict Modal width to 90% 
+  overflow-x: auto !important;
+  max-width: 90vw !important;
+}
+*/
+
+.sidenav {
+    background-color: rgba(52, 83, 130, 1);
+    /*overflow-x: hidden;
+    padding-top: 20px;*/
+}
+
+.main {
+    padding: 0px 10px;
+}
+.s {
+    font-family: SignPainter-HouseScript;
+    color: white;
+    font-weight: lighter;
+    font-size: 700%;
+    margin-left:20%;
+}
+.plitter{
+    font-family: SignPainter-HouseScript;
+    color: white;
+    font-size: 400%;
+    font-weight: lighter;
+}
+.split{
+    color: rgba(227, 174, 32, 1);
+    margin-left: 20%;
+    position: relative;
+    top: -85px;
+    left: 40px;
+}
+input#user {
+    background-image: url('images/username_icon.png');
+    background-size:auto;
+    background-position:5% center;
+    background-repeat: no-repeat;
+    text-indent: 10%;
+}
+input#user:focus {
+    background-image:none;
+    text-indent:0px
+    }
+input#e-mail {
+    background-image: url('images/email_icon.png');
+    background-size:auto;
+    background-position:5% center;
+    background-repeat: no-repeat;
+    text-indent: 10%;
+}
+input#e-mail:focus {
+    background-image:none;
+    text-indent:0px
+    }
+
+input#pwd {
+    background-image: url('images/password_icon.png');
+    background-size:auto;
+    left: 5%;
+    background-position:5% center;
+    background-repeat: no-repeat;
+    text-indent: 8%;
+}
+input#pwd:focus {
+    background-image:none;
+    text-indent:0px
+    }
+
+input#phn {
+    background-image: url('images/phone_icon.png');
+    background-size:auto;
+    left: 5%;
+    background-position:5% center;
+    background-repeat: no-repeat;
+    text-indent: 8%;
+}
+input#phn:focus {
+    background-image:none;
+    text-indent:0px
+    }
+#log-btn {
+    width: 100%;
+    
+}

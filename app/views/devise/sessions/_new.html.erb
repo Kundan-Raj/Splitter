@@ -1,0 +1,57 @@
+
+<%= stylesheet_link_tag 'login', media: 'all', 'data-turbolinks-track': 'reload' %>
+<div class="container" style="top:10%;">
+    
+<!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Login</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Register</button>
+
+<% content_for :head do %>
+  
+<!-- The Modal 1 -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog" style="margin-top: 12%;">
+            <div class="modal-content" style="width: 150%;" >
+                <div class="row">
+                    <div class="col1" style="background-color: darkslateblue; width: 40%">
+                        <div style="object-position: center; margin-top: 25%;">
+                            <p style="display: flex; align-items: center;">
+                                <span class="s">$</span>
+                                <span class="plitter">plitter</span>
+                            </p>
+                            <span Class="split" style="position: relative;">SPLIT IT UP</span>
+                        </div>
+                    </div>
+                    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                    <div class="col2" style="margin-left: 5%;">
+                        <% image_tag("/assets/landing/close.png", alt: "close", id: "close-btn") %>
+                        <br/>
+                        <p style="color: darkblue; font-family: Raleway; text-align: left; font-weight: 700;">LOGIN</p>
+                        <p style="color: rgba(102, 102, 102, 1);">Dont have an account? <a href="#" style="color: darkslateblue">Create your account</a><br/>it takes less than a minute.</p>
+                        <div class="login-form">
+                            <div class="field">
+                                <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "user", name: "user", onchange: "hideIcon(this);", Placeholder: "Email"  %>
+                            </div>
+                            <div class="field">
+                                <%= f.password_field :password, autocomplete: "current-password", class: "form-control", id: "pwd", name: "user", onchange: "hideIcon(this);", Placeholder: "Password"  %>
+                            </div>
+                            <div class="actions">
+                                <%= f.submit "Log in", class: "btn btn-warning rounded-pill", id: "log-btn" %>
+                            </div>
+                            <% end %>
+                            <br/>
+                            <p style="text-align: center;">Forgot password</p>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+<% end %>
+<%= render "devise/shared/links" %>
+    
+  <!--  
+
+-->
